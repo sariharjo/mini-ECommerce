@@ -1,0 +1,76 @@
+# =========================================================
+#  Mini E-Commerce - Daftar Kebutuhan (Requirements)
+# =========================================================
+#  Cara pakai:
+#    1) Software wajib ada di komputer (lihat bagian A)
+#    2) Dependency Node.js diinstal dengan perintah npm install
+#       di folder backend/ dan frontend/ (lihat bagian B)
+# =========================================================
+
+
+## A. SOFTWARE YANG HARUS TERINSTAL
+
+[Wajib]
+- Node.js            >= 18.x   (disarankan 20.x LTS)   https://nodejs.org
+- npm                >= 9.x    (sudah termasuk saat install Node.js)
+- MySQL Server       >= 8.0    (atau MariaDB 10.6+)     https://dev.mysql.com/downloads/
+- Git (opsional)     >= 2.x    https://git-scm.com
+
+[Opsional - untuk cek cepat]
+- MySQL Workbench / phpMyAdmin / DBeaver  (GUI untuk lihat database)
+
+Cek instalasi:
+    node -v
+    npm -v
+    mysql --version
+
+
+## B. DEPENDENCY BACKEND  (folder: backend/)
+#  Instal dengan: cd backend && npm install
+
+- express          ^4.19.2   Web framework / routing REST API
+- mysql2           ^3.11.3   Driver MySQL + connection pool + transaksi
+- jsonwebtoken     ^9.0.2    Autentikasi JWT (login token)
+- bcryptjs         ^2.4.3    Hash password
+- cors             ^2.8.5    Izinkan request dari frontend (beda port)
+- dotenv           ^16.4.5   Baca konfigurasi dari file .env
+
+
+## C. DEPENDENCY FRONTEND  (folder: frontend/)
+#  Instal dengan: cd frontend && npm install
+
+- react            ^18.3.1   Library UI
+- react-dom        ^18.3.1   Render React ke browser
+- react-router-dom ^6.26.2   Routing halaman (SPA)
+- axios            ^1.7.7    HTTP client ke backend
+
+[Dev dependency]
+- vite                 ^5.4.8   Build tool + dev server
+- @vitejs/plugin-react ^4.3.2   Plugin React untuk Vite
+
+
+## D. KONFIGURASI DATABASE
+
+- Nama database : mini_ecommerce
+- Tabel         : users, products, orders, order_items
+- Charset       : utf8mb4 / utf8mb4_unicode_ci
+- File skema    : backend/sql/schema.sql
+
+Konfigurasi koneksi ada di backend/.env :
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_USER=root
+    DB_PASSWORD=
+    DB_NAME=mini_ecommerce
+
+
+## E. PORT DEFAULT
+
+- Backend API   : 5000   (http://localhost:5000/api)
+- Frontend (dev): 5173   (http://localhost:5173)
+
+
+## F. AKUN DEMO (hasil npm run seed)
+
+- Admin : admin@shop.test / admin123
+- User  : user@shop.test  / user123
