@@ -359,3 +359,16 @@ Proyek ini dibuat sederhana untuk pembelajaran. Sebelum dipakai produksi:
 ## 📄 Lisensi
 
 MIT — bebas dipakai, dimodifikasi, dan dibagikan untuk keperluan belajar.
+
+Langkah push ke Repository
+cd path/ke/folder/mini-ECommerce
+git status
+git init
+git add .
+git commit -m "Initial upload mini-ECommerce"
+git branch -M main
+git remote add origin https://github.com/sariharjo/mini-ECommerce.git (bisa disesuaikan dengan link repo)
+git push -u origin main (jika sudah ada README pakai ini aja: git push origin main)
+
+Kalau repo sudah ada isinya (misal README yang auto-generated saat create repo), jalankan ini dulu sebelum push:
+git pull origin main --allow-unrelated-histories
